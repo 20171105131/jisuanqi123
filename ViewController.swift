@@ -14,13 +14,41 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var caculaterDisplay: UITextField!
     
-    
     @IBAction func buttonCaculater(_ sender: Any)
     {
-        var sum = 0
-        sum = temp +
-            Int(caculaterDisplay.text!)!
-        caculaterDisplay.text = "\(sum)"
+        if(flag==1)
+        {
+            var sum = 0
+            sum = temp +
+                Int(caculaterDisplay.text!)!
+            caculaterDisplay.text = "\(sum)"
+            caculaterDisplay.text = ""
+        }
+        if(flag==2)
+        {
+            var minus = 0
+            minus = temp -
+                Int(caculaterDisplay.text!)!
+            caculaterDisplay.text = "\(minus)"
+            caculaterDisplay.text = ""
+        }
+        if(flag==3)
+        {
+            var multiply = 0
+            multiply = temp *
+                Int(caculaterDisplay.text!)!
+            caculaterDisplay.text = "\(multiply)"
+            caculaterDisplay.text = ""
+        }
+        if(flag==4)
+        {
+            var Divided = 0
+            Divided = temp /
+                Int(caculaterDisplay.text!)!
+            caculaterDisplay.text = "\(Divided)"
+            caculaterDisplay.text = ""
+        }
+
     }
     
     
@@ -48,7 +76,7 @@ class ViewController: UIViewController {
         flag = 2
         
     }
-    
+
     @IBAction func buttonMultiply(_ sender: Any) {
         temp =
             Int(caculaterDisplay.text!)!
